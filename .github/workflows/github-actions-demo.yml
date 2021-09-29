@@ -33,7 +33,7 @@ jobs:
       - name: Tag docker image
         run: docker tag spring-boot-buildpack jetcheverry193/spring-boot-buildpack:latest
         
-       -name: Push docker image
+      - name: Push docker image
         run: docker push jetcheverry193/spring-boot-buildpack:latest
         
         
