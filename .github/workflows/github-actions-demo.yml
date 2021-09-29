@@ -29,3 +29,11 @@ jobs:
       
       - name: Build app with pack CLI
         run: pack build spring-boot-buildpack --path . --builder paketobuildpacks/builder:base
+        
+      - name: Tag docker image
+        run: docker tag spring-boot-buildpack jetcheverry193/spring-boot-buildpack:latest
+        
+       -name: Push docker image
+        run: docker push jetcheverry193/spring-boot-buildpack:latest
+        
+        
